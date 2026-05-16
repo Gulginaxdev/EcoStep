@@ -1,9 +1,9 @@
-export default function MapBox() {
+export default function MapPanel() {
   return (
     <div style={{
-      marginTop: "25px",
-      height: "350px",
+      background: "white",
       borderRadius: "20px",
+      height: "400px",
       overflow: "hidden"
     }}>
       <iframe

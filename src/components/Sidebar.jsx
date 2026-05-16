@@ -1,30 +1,31 @@
 export default function Sidebar() {
   return (
     <div style={{
-      width: "220px",
-      background: "white",
+      width: "240px",
+      background: "#ffffff",
       padding: "20px",
-      borderRight: "1px solid #ddd"
+      borderRight: "1px solid #eaeaea"
     }}>
       <h2 style={{ color: "#1f7a4d", marginBottom: "30px" }}>
         EcoStep 🌿
       </h2>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-        <button style={btn}>Dashboard</button>
-        <button style={btn}>Reports</button>
-        <button style={btn}>Map</button>
-        <button style={btn}>Settings</button>
-      </div>
+      {["Dashboard", "Reports", "Map", "Analytics", "Settings"].map(item => (
+        <button key={item} style={btn}>
+          {item}
+        </button>
+      ))}
     </div>
   )
 }
 
 const btn = {
+  width: "100%",
   padding: "12px",
+  marginBottom: "10px",
   border: "none",
   borderRadius: "10px",
-  cursor: "pointer",
-  background: "#eef7f1",
-  textAlign: "left"
+  background: "#f1f7f3",
+  textAlign: "left",
+  cursor: "pointer"
 }

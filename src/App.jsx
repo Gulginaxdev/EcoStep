@@ -1,35 +1,30 @@
 import Sidebar from "./components/Sidebar"
-import Hero from "./components/Hero"
-import Card from "./components/Card"
-import MapBox from "./components/MapBox"
+import TopBar from "./components/TopBar"
+import StatGrid from "./components/StatGrid"
+import MapPanel from "./components/MapPanel"
+import ActivityPanel from "./components/ActivityPanel"
 
 export default function App() {
   return (
-    <div style={{ display: "flex", minHeight: "100vh" }}>
+    <div style={{ display: "flex", minHeight: "100vh", background: "#f4f7f5" }}>
 
       <Sidebar />
 
-      <div style={{ flex: 1, padding: "30px" }}>
+      <div style={{ flex: 1, padding: "20px" }}>
 
-        <h1 style={{ fontSize: "32px", marginBottom: "20px" }}>
-          EcoStep Dashboard 🌿
-        </h1>
+        <TopBar />
 
-        {/* Cards */}
+        <StatGrid />
+
         <div style={{
           display: "grid",
-          gridTemplateColumns: "repeat(4,1fr)",
-          gap: "15px"
+          gridTemplateColumns: "2fr 1fr",
+          gap: "20px",
+          marginTop: "20px"
         }}>
-          <Card title="Reports" number="24" />
-          <Card title="Resolved" number="12" />
-          <Card title="Active Issues" number="8" />
-          <Card title="Users" number="120" />
+          <MapPanel />
+          <ActivityPanel />
         </div>
-
-        <Hero />
-
-        <MapBox />
 
       </div>
     </div>
